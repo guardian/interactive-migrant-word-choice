@@ -1,0 +1,167 @@
+.gv-wrapper {
+	width: 100%;
+
+	margin: 0px auto;
+}
+
+.gv-container {
+	float: left;
+	width: 100%;
+	overflow: visible;
+	border-top: 1px solid colour('neutral-7');
+	padding-bottom: 40px;
+}
+
+.gv-excerpt {
+	border-bottom: 1px solid colour('neutral-6');
+	background: colour('neutral-7');
+	padding: 20px;
+
+	.gv-blank {
+		width: 260px;
+		height: 30px;
+	}
+}
+
+.gv-response {
+	display: none;
+}
+
+.gv-selected {
+
+}
+
+.gv-break-text {
+	display: block;
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+	text-align: center;
+	.gv-break-line {
+		width: 160px;
+		height: 2px; 
+		background: colour('neutral-4');
+		display: inline-block;
+
+	}
+}
+
+
+select.gv-select-box {
+	width: 100%;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+   
+    border: 2px solid colour('comment-support-4');
+	background: #fff;
+    border-radius: 3px;
+    line-height: 1em;
+    background-image: url(https://interactive.guim.co.uk/2015/aug/un/imgs/arrow.2caae179.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    max-width: 360px;
+  	margin-top: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: Guardian Egyptian Web,Georgia,serif;
+    font-weight: 900;
+}
+
+.gv-selected {
+	.gv-response {
+		display: block;
+	}
+
+	.gv-word-select {
+		display: none;
+	}
+}
+
+@media(min-width:660px){
+
+	.gv-wrapper {
+		max-width: 660px;
+		padding: 0 20px;
+	}
+
+	.gv-container {
+
+	}
+	
+}
+
+@media(min-width:740px){
+
+	.gv-wrapper {
+		max-width:740px;
+	}
+
+	.gv-col-content {
+		float: left;
+		width: 66%;
+	}
+
+	.gv-col-response {
+		float: left;
+		width: 33%;
+		padding-left: 20px;
+	}
+
+
+}
+
+@media(min-width:980px){
+
+	.gv-wrapper {
+		max-width:980px;
+	}
+
+	.gv-col-content {
+		width: 640px;
+	}
+
+	.gv-col-response {
+		width: 220px;
+	}
+
+}
+
+@media(min-width:1140px){
+
+	.gv-wrapper {
+		max-width:1140px;
+	}
+
+	.gv-col-content {
+		margin-left: 180px;
+	}
+
+	.gv-header {
+		padding-left: 160px;
+	}
+
+}
+
+
+@media(min-width:1300px){
+
+	.gv-wrapper {
+		max-width:1300px;
+	}
+
+	.gv-col-content {
+		margin-left: 240px;
+	}
+
+	.gv-col-response {
+		width: 260px;
+	}
+
+	.gv-header {
+		padding-left: 240px;
+	}
+
+}
+
+

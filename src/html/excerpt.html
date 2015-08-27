@@ -1,0 +1,32 @@
+<div class='gv-container' id='gv-block-{{@index}}'>
+
+	<div class='gv-header'>
+		<h4>Case {{get_index @index }}: {{case}}</h4>
+	</div>
+	<div class='gv-col-content'>
+		
+
+		<div class='gv-excerpt' id='gv-excerpt-{{@index}}'>
+			{{{excerpt}}}
+		</div>
+	</div>
+
+	<div class='gv-col-response'>
+		<div class='gv-word-select'>
+			<h4>Which word you would use?</h4>
+			<select class='gv-select-box' id='gv-select-{{@index}}'>
+				<option value=""></option>
+				{{#words}}
+					<option value="{{.}}">{{.}}</option>
+				{{/words}}
+			</select>
+		</div>
+
+		<div class='gv-response'>
+			<h4>You said you would use <div class='gv-user-choice' id='gv-user-choice-{{@index}}'></div>.</h4>
+
+			<p>{{{annotation}}}</p>
+		</div>
+	</div>
+
+</div>

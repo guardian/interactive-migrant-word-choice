@@ -1,0 +1,68 @@
+.gv-container {
+	h4 {
+		@include fs-header(4);
+		margin: 10px 0;
+		display: inline-block;
+	}
+
+	.gv-col-response {
+		h4 {
+			margin: 20px 0 0 0;
+		}
+	}
+
+	p {
+		
+		@include fs-bodyCopy(2);
+
+	}
+
+	#gv-response {
+		p {
+			@include fs-bodyCopy(3);
+		}
+	}
+}
+
+
+
+.gv-excerpt {
+		@include fs-headline(3);
+		line-height: 32px;
+
+		.gv-blank {
+			background: colour('comment-support-4');
+			//border-bottom: 2px solid colour('multimedia-main-2');
+			border-radius: 3px;
+			color: #fff;
+			display: inline-block;
+			text-align: center;
+			font-weight: 600;
+		}
+
+		span {
+			visibility: hidden;
+			font-size: 18px;
+		}
+	}	
+
+.gv-container.gv-selected {
+	
+	.gv-excerpt {
+		span {
+			visibility: visible;
+		}
+	}
+	
+}
+
+.gv-user-choice {
+	
+	
+	color: colour('comment-main-1');
+	display: inline-block;
+	@include fs-headline(4);
+
+}
+
+
