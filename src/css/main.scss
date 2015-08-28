@@ -8,23 +8,21 @@
 @import 'layout';
 @import 'type';
 
-body {
+figure.interactive {
     margin: 0;
-    padding: 0;
 }
 
-.interactive {
-	margin: 0;
-}
+
 // Setup page
 .gv-wrapper {
 	box-sizing:border-box;
     line-height: 1;
+    overflow: hidden;
 
+    padding: 0;
     font-family:'Guardian Egyptian Web','Egyptian Display', Georgia;
     -webkit-font-smoothing: antialiased;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-    margin-bottom: 20px;
+    
 
 
     *{

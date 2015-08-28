@@ -1,7 +1,7 @@
 <div class='gv-container' id='gv-block-{{@index}}'>
 
 	<div class='gv-header'>
-		<h4>Case {{get_index @index }}: {{case}}</h4>
+		<h4>{{get_index @index }}) {{case}}</h4>
 	</div>
 	<div class='gv-col-content'>
 		
@@ -25,7 +25,7 @@
 		<div class='gv-response'>
 			<h4>You said you would use <div class='gv-user-choice' id='gv-user-choice-{{@index}}'></div>.</h4>
 
-			<p>{{{annotation}}}</p>
+			<p>{{{get_annotation annotation}}}</p>
 		</div>
 	</div>
 

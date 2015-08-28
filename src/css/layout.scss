@@ -1,6 +1,30 @@
+.gv-page-header {
+	background: colour('multimedia-main-2');
+	min-height: 460px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	* {
+		box-sizing: border-box;
+	}
+
+	.gv-header-container {
+	
+		margin: 0px auto;
+		padding: 20px;
+	}
+	.gv-header-blank {
+		height: 60px;
+		width: 300px;
+		border: 3px solid #fff;
+		border-radius: 4px;
+		display: inline-block;
+		margin-right: 10px;
+	}
+}
+
 .gv-wrapper {
 	width: 100%;
-
+	padding: 0;
 	margin: 0px auto;
 }
 
@@ -8,18 +32,23 @@
 	float: left;
 	width: 100%;
 	overflow: visible;
-	border-top: 1px solid colour('neutral-7');
+	border-bottom: 5px solid #fff;
 	padding-bottom: 40px;
+	
+}
+
+.gv-container-response {
+	border-top: 2px solid colour('multimedia-main-2');
 }
 
 .gv-excerpt {
-	border-bottom: 1px solid colour('neutral-6');
+	border-bottom: 1px solid colour('neutral-5');
 	background: colour('neutral-7');
 	padding: 20px;
 
 	.gv-blank {
-		width: 260px;
-		height: 30px;
+		width: 230px;
+		height: 36px;
 	}
 }
 
@@ -27,9 +56,6 @@
 	display: none;
 }
 
-.gv-selected {
-
-}
 
 .gv-break-text {
 	display: block;
@@ -49,18 +75,19 @@
 
 select.gv-select-box {
 	width: 100%;
+
 	-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
    
-    border: 2px solid colour('comment-support-4');
+    border: 2px solid colour('multimedia-main-2');
 	background: #fff;
     border-radius: 3px;
     line-height: 1em;
     background-image: url(https://interactive.guim.co.uk/2015/aug/un/imgs/arrow.2caae179.svg);
     background-repeat: no-repeat;
     background-position: right 10px center;
-    max-width: 360px;
+    max-width: 300px;
   	margin-top: 20px;
     font-size: 16px;
     line-height: 30px;
@@ -76,6 +103,12 @@ select.gv-select-box {
 	.gv-word-select {
 		display: none;
 	}
+
+	background: colour('neutral-8');
+
+	.gv-excerpt {
+		background: colour('neutral-6');
+	}
 }
 
 @media(min-width:660px){
@@ -87,6 +120,16 @@ select.gv-select-box {
 
 	.gv-container {
 
+	}
+
+	.gv-blank {
+		width: 260px;
+	}
+
+	.gv-page-header {
+		.gv-header-blank {
+			width: 460px;
+		}
 	}
 	
 }
@@ -108,6 +151,15 @@ select.gv-select-box {
 		padding-left: 20px;
 	}
 
+	.gv-page-header {
+		
+		.gv-header-container {
+
+			max-width: 740px;
+		}
+		
+	}
+
 
 }
 
@@ -118,13 +170,33 @@ select.gv-select-box {
 	}
 
 	.gv-col-content {
-		width: 640px;
+		width: 620px;
 	}
 
 	.gv-col-response {
 		width: 220px;
 	}
 
+	.gv-page-header {
+		
+		.gv-header-container {
+
+			max-width: 740px;
+		}
+		
+	}
+
+}
+
+@media(min-width:980px){
+	.gv-page-header {
+		
+		.gv-header-container {
+
+			max-width: 980px;
+		}
+		
+	}
 }
 
 @media(min-width:1140px){
@@ -134,11 +206,22 @@ select.gv-select-box {
 	}
 
 	.gv-col-content {
-		margin-left: 180px;
+		margin-left: 160px;
 	}
 
 	.gv-header {
 		padding-left: 160px;
+	}
+
+	.gv-page-header {
+		
+
+		.gv-header-container {
+
+			max-width: 1140px;
+			padding-left: 180px;
+		}
+		
 	}
 
 }
@@ -161,6 +244,15 @@ select.gv-select-box {
 	.gv-header {
 		padding-left: 240px;
 	}
+
+	.gv-page-header {
+		.gv-header-container {
+			max-width: 1260px;
+			padding-left: 240px;
+		}
+	}
+
+
 
 }
 

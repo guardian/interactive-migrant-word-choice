@@ -10,12 +10,21 @@ var getJSON = require('./utils/getjson');
 var template = require('./html/base.html');
 var userAnswers = {};
 var caseAnswers = {};
+var data;
+var header;
 
 function boot(el) {
 
 	var key = '1gblHjOmrLaYmaMItiCvQnuPybyDlKAL7q141bx7c4T8';
 	var isLive = ( window.location.origin.search('interactive.guim.co.uk') || window.location.origin.search('preview.gutools.co.uk') > -1) ? false : true;
     var folder = (!isLive)? 'docsdata-test' : 'docsdata';
+
+    header = document.querySelector('.content__head');
+    if(!header){
+    	header = document.querySelector('.article__header');
+    }
+
+    
 
     getJSON('https://interactive.guim.co.uk/' + folder + '/' + key + '.json', function(json){
     	render(el, json)
@@ -24,8 +33,20 @@ function boot(el) {
 }
 
 
-function render(el, data) {
-	console.log(data)
+function render(el, docData) {
+	data = docData;
+
+	if(header){
+		header.innerHTML = Handlebars.compile( 
+                        require('./html/header.html'), 
+                        { 
+                            compat: true
+                        }
+                )(data);
+	}
+	
+
+	
 
 	data.examples.forEach(function(e){
 		e.excerpt = e.excerpt.replace(/<div>/g, "<div class='gv-blank'>").replace(/\+\+\+/g, "<div class='gv-break-text'><div class='gv-break-line'></div></div>")
@@ -67,6 +88,9 @@ function render(el, data) {
     		}
 
     		return value + '.';
+    	},
+    	'get_annotation': function(annotation){
+    		return annotation.replace(/’/g, "'");
     	}
     });
 
@@ -133,17 +157,18 @@ function sanitizeWord(word){
 
 function updateTotal(){
 
-	var data = {
+	var responseData = {
 		userAnswers: [],
-		caseAnswers: []
+		caseAnswers: [],
+		actualWordsUsed: data.actualWordsUsed
 	}
 
 	for(var c in caseAnswers ){
-		data.caseAnswers.push(c);
+		responseData.caseAnswers.push(c);
 	}
 
 	for(var u in userAnswers ){
-		data.userAnswers.push(u);
+		responseData.userAnswers.push(u);
 	}
 
 
@@ -154,7 +179,7 @@ function updateTotal(){
                         }
                 );
   	
-  	document.getElementById('gv-response').innerHTML = response(data);
+  	document.getElementById('gv-response').innerHTML = response(responseData);
 
 }
 
