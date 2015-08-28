@@ -16,7 +16,7 @@ var header;
 function boot(el) {
 
 	var key = '1gblHjOmrLaYmaMItiCvQnuPybyDlKAL7q141bx7c4T8';
-	var isLive = ( window.location.origin.search('interactive.guim.co.uk') || window.location.origin.search('preview.gutools.co.uk') > -1) ? false : true;
+	var isLive = ( window.location.origin.search('interactive.guim.co.uk') > -1 || window.location.origin.search('preview.gutools.co.uk') > -1) ? false : true;
     var folder = (!isLive)? 'docsdata-test' : 'docsdata';
 
     header = document.querySelector('.content__head');
