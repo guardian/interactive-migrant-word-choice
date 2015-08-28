@@ -98,6 +98,7 @@ select.gv-select-box {
 .gv-selected {
 	.gv-response {
 		display: block;
+		padding-left: 20px;
 	}
 
 	.gv-word-select {
@@ -110,6 +111,11 @@ select.gv-select-box {
 		background: colour('neutral-6');
 	}
 }
+
+.gv-header {
+	padding-left: 20px;
+}
+
 
 @media(min-width:660px){
 

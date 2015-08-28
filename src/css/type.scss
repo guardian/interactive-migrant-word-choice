@@ -65,7 +65,7 @@
 			background: colour('multimedia-main-2');
 			//border-bottom: 2px solid colour('multimedia-main-2');
 			border-radius: 3px;
-			color: #fff;
+			color: #c05303;
 			display: inline-block;
 			text-align: center;
 			font-weight: 600;
@@ -88,10 +88,19 @@
 	
 }
 
+.gv-response span {
+	background: colour('multimedia-main-2');
+	color: #fff;
+	padding: 3px;
+	border-radius: 2px;
+
+	color:#c05303;
+}
+
 .gv-user-choice {
 	
 	
-	color: colour('multimedia-main-2');
+	color: #c05303;
 	display: inline-block;
 	@include fs-headline(4);
 
