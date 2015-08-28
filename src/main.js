@@ -36,22 +36,6 @@ function boot(el) {
 function render(el, docData) {
 	data = docData;
 
-	if(header){
-		header.innerHTML = Handlebars.compile( 
-                        require('./html/header.html'), 
-                        { 
-                            compat: true
-                        }
-                )(data);
-	}
-	
-
-	
-
-	data.examples.forEach(function(e){
-		e.excerpt = e.excerpt.replace(/<div>/g, "<div class='gv-blank'>").replace(/\+\+\+/g, "<div class='gv-break-text'><div class='gv-break-line'></div></div>")
-	})
-
 	Handlebars.registerHelper({
         'get_index': function(index) {
     	    return index + 1;
@@ -93,6 +77,24 @@ function render(el, docData) {
     		return annotation.replace(/’/g, "'");
     	}
     });
+
+	if(header){
+		header.innerHTML = Handlebars.compile( 
+                        require('./html/header.html'), 
+                        { 
+                            compat: true
+                        }
+                )(data);
+	}
+	
+
+	
+
+	data.examples.forEach(function(e){
+		e.excerpt = e.excerpt.replace(/<div>/g, "<div class='gv-blank'>").replace(/\+\+\+/g, "<div class='gv-break-text'><div class='gv-break-line'></div></div>")
+	})
+
+	
 
 	Handlebars.registerPartial({
         'excerpt': require('./html/excerpt.html')
